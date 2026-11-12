@@ -1,5 +1,6 @@
 /* 
 !/.gitignore
+!/README.md
 !/vcam/
 !/VCamDemo/
 .DS_Store
