@@ -1,0 +1,7 @@
+/* 
+!/.gitignore
+!/vcam/
+!/VCamDemo/
+.DS_Store
+xcuserdata/
+*.xcuserstate

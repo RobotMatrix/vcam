@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>entry</key>
+	<dict>
+		<key>cell</key>
+		<string>PSLinkCell</string>
+		<key>label</key>
+		<string>VCam 摄像头替换</string>
+		<key>icon</key>
+		<string>vcam.png</string>
+	</dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.bangcle.vcam</string>
+			<key>key</key>
+			<string>enabled</string>
+			<key>label</key>
+			<string>启用替换</string>
+			<key>PostNotification</key>
+			<string>com.bangcle.vcam.reload</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.bangcle.vcam</string>
+			<key>key</key>
+			<string>global</string>
+			<key>label</key>
+			<string>全局模式 (所有App)</string>
+			<key>PostNotification</key>
+			<string>com.bangcle.vcam.reload</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>按 App 生效 (每行一个 bundle id)</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>defaults</key>
+			<string>com.bangcle.vcam</string>
+			<key>key</key>
+			<string>appsText</string>
+			<key>label</key>
+			<string>App 列表</string>
+			<key>placeholder</key>
+			<string>com.bangcle.vcamdemo</string>
+			<key>PostNotification</key>
+			<string>com.bangcle.vcam.reload</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>替换媒体 (照片/视频)</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>defaults</key>
+			<string>com.bangcle.vcam</string>
+			<key>key</key>
+			<string>photoPath</string>
+			<key>label</key>
+			<string>照片路径</string>
+			<key>placeholder</key>
+			<string>/var/mobile/Library/vcam/photo.jpg</string>
+			<key>PostNotification</key>
+			<string>com.bangcle.vcam.reload</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>defaults</key>
+			<string>com.bangcle.vcam</string>
+			<key>key</key>
+			<string>videoPath</string>
+			<key>label</key>
+			<string>视频路径</string>
+			<key>placeholder</key>
+			<string>/var/mobile/Library/vcam/video.mp4</string>
+			<key>PostNotification</key>
+			<string>com.bangcle.vcam.reload</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>修改设置后自动推送 reload 通知。daemon (mediaserverd) 与 App 内 hook 都监听同一通知。全局模式优先于 App 列表。</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>VCam</string>
+</dict>
+</plist>
